@@ -26,7 +26,7 @@ namespace WeatherApp
             btnWeeklyForecast.Enabled = false;
     }
         //Grab APIkey from openweathermap
-        string APIKey = "18dede3a5891aa7f0c4f991203e451c0";
+        string APIKey = "8755aca3fcad3f0fa15174a40f901202";
 
         //Initialise a list that will store user's search
         List<string> searchHistory = new List<string>();
@@ -124,41 +124,57 @@ namespace WeatherApp
         //Method for the Daily Forecast UI
         void getForecast()
         {
-            
             using (WebClient web = new WebClient())
             {
-                //Clears the existing forecast
-                FLP.Controls.Clear();
-
-                //Loads the data from the link
-                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&appid={2}&units=metric", lat, lon, APIKey);
-                var json = web.DownloadString(url);
-                WeatherForecast.ForecastInfo ForecastInfo = JsonConvert.DeserializeObject<WeatherForecast.ForecastInfo>(json);
-
-                //Create a new instance of User control to display the hourly weather
-                ForecastUC FUC;
-
-                //Loops over the hourly (10) weather forecast
-                for (int i = 0; i < 11; i++)
+                try
                 {
-                    //Create new object of Forecast User Control 
-                    FUC = new ForecastUC();
-                    //Set up the required data the User control requires
-                    FUC.picWeatherIcon.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.hourly[i].weather[0].icon + ".png";
-                    FUC.labDT.Text = convertDateTime(ForecastInfo.hourly[i].dt).ToString("HH:mm");
-                    if (isCelsius)
-                    {
-                        FUC.labWindSpeed.Text = ForecastInfo.hourly[i].wind_speed.ToString("0.##") + " m/s";
-                    }
-                    else
-                    {
-                        FUC.labWindSpeed.Text = (ForecastInfo.hourly[i].wind_speed * 2.23694).ToString("0.##") + " mi/h";
-                    }
-                    FUC.labWeatherDescription.Text = ForecastInfo.hourly[i].weather[0].description;
-                    FUC.labTemperature.Text = ForecastInfo.hourly[i].temp.ToString("0.0") + "°C"; 
+                    // 도시명 기반 forecast API 사용
+                    string url = string.Format(
+                        "https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&units={2}",
+                        TBCity.Text,
+                        APIKey,
+                        isCelsius ? "metric" : "imperial");
 
-                    //FlowLayoutPanel adds the User control into its element
-                    FLP.Controls.Add(FUC);
+                    var json = web.DownloadString(url);
+                    Forecast5Day forecastData = JsonConvert.DeserializeObject<Forecast5Day>(json);
+
+                    FLP.Controls.Clear();
+
+                    // 3시간 단위 데이터에서 10개만 표시
+                    for (int i = 0; i < Math.Min(10, forecastData.list.Count); i++)
+                    {
+                        var forecast = forecastData.list[i];
+
+                        ForecastUC FUC = new ForecastUC();
+
+                        FUC.picWeatherIcon.ImageLocation =
+                            "https://openweathermap.org/img/w/" +
+                            forecast.weather[0].icon + ".png";
+
+                        FUC.labDT.Text =
+                            DateTime.Parse(forecast.dt_txt).ToString("HH:mm");
+
+                        FUC.labWindSpeed.Text =
+                            forecast.wind.speed.ToString("0.##") +
+                            (isCelsius ? " m/s" : " mi/h");
+
+                        FUC.labWeatherDescription.Text =
+                            forecast.weather[0].description;
+
+                        FUC.labTemperature.Text =
+                            forecast.main.temp.ToString("0.0") +
+                            (isCelsius ? "°C" : "°F");
+
+                        FLP.Controls.Add(FUC);
+                    }
+                }
+                catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
+                {
+                    MessageBox.Show("City not found. Please ensure you've entered a valid city name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Forecast load error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -256,4 +272,33 @@ namespace WeatherApp
             weeklyForecast.Show();
         }
     }
+}
+public class Forecast5Day
+{
+    public List<ForecastList> list { get; set; }
+}
+
+public class ForecastList
+{
+    public ForecastMainInfo main { get; set; }
+    public List<ForecastWeatherInfo> weather { get; set; }
+    public ForecastWindInfo wind { get; set; }
+    public string dt_txt { get; set; }
+}
+
+public class ForecastMainInfo
+{
+    public double temp { get; set; }
+}
+
+public class ForecastWeatherInfo
+{
+    public string main { get; set; }
+    public string description { get; set; }
+    public string icon { get; set; }
+}
+
+public class ForecastWindInfo
+{
+    public double speed { get; set; }
 }

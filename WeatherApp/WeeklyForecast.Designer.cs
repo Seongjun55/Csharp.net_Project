@@ -39,6 +39,7 @@
             this.weeklyFLP.Size = new System.Drawing.Size(477, 167);
             this.weeklyFLP.TabIndex = 0;
             this.weeklyFLP.WrapContents = false;
+            this.weeklyFLP.Paint += new System.Windows.Forms.PaintEventHandler(this.weeklyFLP_Paint);
             // 
             // WeeklyForecast
             // 
