@@ -14,11 +14,12 @@ namespace WeatherApp
         private double lat;
         private bool isCelsius;  // This flag determines the unit (Celsius or Fahrenheit)
 
-        public WeeklyForecast(double lon, double lat)
+        public WeeklyForecast(double lon, double lat, bool isCelsius)
         {
             InitializeComponent();
             this.lon = lon;
             this.lat = lat;
+            this.isCelsius = isCelsius;
             getWeeklyForecast();
         }
 
@@ -28,10 +29,11 @@ namespace WeatherApp
             {
                 weeklyFLP.Controls.Clear();
 
+                string unit = isCelsius ? "metric" : "imperial";
+
                 string url = string.Format(
-                   "https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&units=metric",
-                   "Seoul",  // 우선 "Seoul"로 테스트하세요
-                   APIKey);
+                    "https://api.openweathermap.org/data/2.5/forecast?lat={0}&lon={1}&appid={2}&units={3}",
+                    lat, lon, APIKey, unit);
 
                 try
                 {
@@ -40,7 +42,7 @@ namespace WeatherApp
 
                     var groupedDays = forecastData.list
                         .GroupBy(item => DateTime.Parse(item.dt_txt).Date)
-                        .Take(5); // 최대 5일만 표시
+                        .Take(5);
 
                     foreach (var dayGroup in groupedDays)
                     {
@@ -58,13 +60,13 @@ namespace WeatherApp
                             dayGroup.Key.DayOfWeek.ToString();
 
                         wkFUC.labRealTemp.Text =
-                            "Avg.Temp: " + avgTemp.ToString("0.0") + "°C";
+                            "Avg.Temp: " + avgTemp.ToString("0.0") + (isCelsius ? "°C" : "°F");
 
                         wkFUC.labTemperature.Text =
                             "Main weather: " + firstItem.weather[0].main.ToString();
 
                         wkFUC.labWindSpeed.Text =
-                            "Wind speed: " + avgWind.ToString("0.0") + " m/s";
+                            "Wind speed: " + avgWind.ToString("0.0") + (isCelsius ? " m/s" : " mi/h");
 
                         wkFUC.labWeatherDescription.Text =
                             firstItem.weather[0].description.ToString();
@@ -72,13 +74,13 @@ namespace WeatherApp
                         weeklyFLP.Controls.Add(wkFUC);
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("An error occurred while fetching the weekly weather data. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Console.WriteLine(ex.Message);
                 }
             }
         }
+
 
         DateTime convertDateTime(long sec)
         {

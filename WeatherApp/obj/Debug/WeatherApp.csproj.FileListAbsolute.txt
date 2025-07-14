@@ -124,3 +124,21 @@ C:\Users\crane\Desktop\Test\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileIn
 C:\Users\crane\Desktop\Test\WeatherApp\obj\Debug\WeatherApp.csproj.CopyComplete
 C:\Users\crane\Desktop\Test\WeatherApp\obj\Debug\WeatherApp.exe
 C:\Users\crane\Desktop\Test\WeatherApp\obj\Debug\WeatherApp.pdb
+C:\Users\crane\Desktop\New version Test\WeatherApp\bin\Debug\WeatherApp.exe.config
+C:\Users\crane\Desktop\New version Test\WeatherApp\bin\Debug\WeatherApp.exe
+C:\Users\crane\Desktop\New version Test\WeatherApp\bin\Debug\WeatherApp.pdb
+C:\Users\crane\Desktop\New version Test\WeatherApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\crane\Desktop\New version Test\WeatherApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.csproj.AssemblyReference.cache
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.ForecastUC.resources
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.Form1.resources
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.Properties.Resources.resources
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.SearchHistoryForm.resources
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.WeeklyForecast.resources
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.WeeklyForecastUC.resources
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.csproj.GenerateResource.cache
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileInputs.cache
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.exe
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.pdb
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.exe.config
+C:\Users\crane\Desktop\New version Test\WeatherApp\obj\Debug\WeatherApp.csproj.Up2Date

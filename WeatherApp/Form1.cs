@@ -111,14 +111,6 @@ namespace WeatherApp
                     btnViewHistory.Enabled = false;
                     btnWeeklyForecast.Enabled = false;
                 }
-                catch (Exception ex)
-                {
-                    // Other general errors
-                    MessageBox.Show("An error occurred while fetching the weather data. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    toggleCtoF.Enabled = false;
-                    btnViewHistory.Enabled = false;
-                    btnWeeklyForecast.Enabled = false;
-                }
             }
         }
         //Method for the Daily Forecast UI
@@ -267,9 +259,14 @@ namespace WeatherApp
         private void btnWeeklyForecast_Click(object sender, EventArgs e)
         {
             //Create new object of weeklyforecast form, pass lon and lat aswell
-            WeeklyForecast weeklyForecast = new WeeklyForecast(lon, lat);
+            WeeklyForecast weeklyForecast = new WeeklyForecast(lon, lat, isCelsius);
             //Display in new window this form
             weeklyForecast.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

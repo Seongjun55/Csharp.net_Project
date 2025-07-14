@@ -58,9 +58,10 @@
             // picIcon
             // 
             this.picIcon.BackColor = System.Drawing.Color.Transparent;
-            this.picIcon.Location = new System.Drawing.Point(96, 118);
+            this.picIcon.Location = new System.Drawing.Point(84, 94);
+            this.picIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(135, 106);
+            this.picIcon.Size = new System.Drawing.Size(118, 85);
             this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picIcon.TabIndex = 31;
             this.picIcon.TabStop = false;
@@ -71,9 +72,9 @@
             this.Cloud.BackColor = System.Drawing.Color.Transparent;
             this.Cloud.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cloud.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Cloud.Location = new System.Drawing.Point(404, 366);
+            this.Cloud.Location = new System.Drawing.Point(354, 293);
             this.Cloud.Name = "Cloud";
-            this.Cloud.Size = new System.Drawing.Size(66, 23);
+            this.Cloud.Size = new System.Drawing.Size(53, 18);
             this.Cloud.TabIndex = 29;
             this.Cloud.Text = "Cloud:";
             // 
@@ -83,9 +84,9 @@
             this.labHumidity.BackColor = System.Drawing.Color.Transparent;
             this.labHumidity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labHumidity.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labHumidity.Location = new System.Drawing.Point(543, 323);
+            this.labHumidity.Location = new System.Drawing.Point(475, 258);
             this.labHumidity.Name = "labHumidity";
-            this.labHumidity.Size = new System.Drawing.Size(42, 23);
+            this.labHumidity.Size = new System.Drawing.Size(34, 18);
             this.labHumidity.TabIndex = 28;
             this.labHumidity.Text = "N/A";
             // 
@@ -95,9 +96,9 @@
             this.Humidity.BackColor = System.Drawing.Color.Transparent;
             this.Humidity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Humidity.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Humidity.Location = new System.Drawing.Point(404, 323);
+            this.Humidity.Location = new System.Drawing.Point(354, 258);
             this.Humidity.Name = "Humidity";
-            this.Humidity.Size = new System.Drawing.Size(90, 23);
+            this.Humidity.Size = new System.Drawing.Size(72, 18);
             this.Humidity.TabIndex = 27;
             this.Humidity.Text = "Humidity:";
             // 
@@ -107,9 +108,9 @@
             this.labWindSpeed.BackColor = System.Drawing.Color.Transparent;
             this.labWindSpeed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labWindSpeed.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labWindSpeed.Location = new System.Drawing.Point(543, 279);
+            this.labWindSpeed.Location = new System.Drawing.Point(475, 223);
             this.labWindSpeed.Name = "labWindSpeed";
-            this.labWindSpeed.Size = new System.Drawing.Size(42, 23);
+            this.labWindSpeed.Size = new System.Drawing.Size(34, 18);
             this.labWindSpeed.TabIndex = 26;
             this.labWindSpeed.Text = "N/A";
             // 
@@ -119,9 +120,9 @@
             this.WindSpeed.BackColor = System.Drawing.Color.Transparent;
             this.WindSpeed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WindSpeed.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.WindSpeed.Location = new System.Drawing.Point(404, 279);
+            this.WindSpeed.Location = new System.Drawing.Point(354, 223);
             this.WindSpeed.Name = "WindSpeed";
-            this.WindSpeed.Size = new System.Drawing.Size(123, 23);
+            this.WindSpeed.Size = new System.Drawing.Size(99, 18);
             this.WindSpeed.TabIndex = 25;
             this.WindSpeed.Text = "Wind Speed:";
             // 
@@ -131,9 +132,9 @@
             this.labSunset.BackColor = System.Drawing.Color.Transparent;
             this.labSunset.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSunset.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labSunset.Location = new System.Drawing.Point(184, 406);
+            this.labSunset.Location = new System.Drawing.Point(161, 325);
             this.labSunset.Name = "labSunset";
-            this.labSunset.Size = new System.Drawing.Size(42, 23);
+            this.labSunset.Size = new System.Drawing.Size(34, 18);
             this.labSunset.TabIndex = 24;
             this.labSunset.Text = "N/A";
             // 
@@ -143,9 +144,9 @@
             this.Sunset.BackColor = System.Drawing.Color.Transparent;
             this.Sunset.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sunset.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Sunset.Location = new System.Drawing.Point(101, 406);
+            this.Sunset.Location = new System.Drawing.Point(88, 325);
             this.Sunset.Name = "Sunset";
-            this.Sunset.Size = new System.Drawing.Size(76, 23);
+            this.Sunset.Size = new System.Drawing.Size(60, 18);
             this.Sunset.TabIndex = 23;
             this.Sunset.Text = "Sunset:";
             // 
@@ -155,9 +156,9 @@
             this.labSunrise.BackColor = System.Drawing.Color.Transparent;
             this.labSunrise.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSunrise.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labSunrise.Location = new System.Drawing.Point(184, 366);
+            this.labSunrise.Location = new System.Drawing.Point(161, 293);
             this.labSunrise.Name = "labSunrise";
-            this.labSunrise.Size = new System.Drawing.Size(42, 23);
+            this.labSunrise.Size = new System.Drawing.Size(34, 18);
             this.labSunrise.TabIndex = 22;
             this.labSunrise.Text = "N/A";
             // 
@@ -167,9 +168,9 @@
             this.Sunrise.BackColor = System.Drawing.Color.Transparent;
             this.Sunrise.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sunrise.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Sunrise.Location = new System.Drawing.Point(101, 366);
+            this.Sunrise.Location = new System.Drawing.Point(88, 293);
             this.Sunrise.Name = "Sunrise";
-            this.Sunrise.Size = new System.Drawing.Size(81, 23);
+            this.Sunrise.Size = new System.Drawing.Size(65, 18);
             this.Sunrise.TabIndex = 21;
             this.Sunrise.Text = "Sunrise:";
             // 
@@ -179,9 +180,9 @@
             this.labDetails.BackColor = System.Drawing.Color.Transparent;
             this.labDetails.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDetails.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labDetails.Location = new System.Drawing.Point(101, 323);
+            this.labDetails.Location = new System.Drawing.Point(88, 258);
             this.labDetails.Name = "labDetails";
-            this.labDetails.Size = new System.Drawing.Size(70, 23);
+            this.labDetails.Size = new System.Drawing.Size(57, 18);
             this.labDetails.TabIndex = 20;
             this.labDetails.Text = "Details";
             // 
@@ -191,9 +192,9 @@
             this.labCondition.BackColor = System.Drawing.Color.Transparent;
             this.labCondition.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCondition.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labCondition.Location = new System.Drawing.Point(101, 279);
+            this.labCondition.Location = new System.Drawing.Point(88, 223);
             this.labCondition.Name = "labCondition";
-            this.labCondition.Size = new System.Drawing.Size(91, 23);
+            this.labCondition.Size = new System.Drawing.Size(75, 18);
             this.labCondition.TabIndex = 19;
             this.labCondition.Text = "Condition";
             // 
@@ -203,9 +204,10 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Arial", 10F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(408, 42);
+            this.btnSearch.Location = new System.Drawing.Point(357, 34);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 36);
+            this.btnSearch.Size = new System.Drawing.Size(74, 29);
             this.btnSearch.TabIndex = 18;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -216,9 +218,10 @@
             this.TBCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.TBCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.TBCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBCity.Location = new System.Drawing.Point(177, 43);
+            this.TBCity.Location = new System.Drawing.Point(155, 34);
+            this.TBCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBCity.Name = "TBCity";
-            this.TBCity.Size = new System.Drawing.Size(197, 30);
+            this.TBCity.Size = new System.Drawing.Size(173, 26);
             this.TBCity.TabIndex = 17;
             // 
             // label1
@@ -227,9 +230,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(103, 46);
+            this.label1.Location = new System.Drawing.Point(90, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 23);
+            this.label1.Size = new System.Drawing.Size(39, 18);
             this.label1.TabIndex = 16;
             this.label1.Text = "City:";
             // 
@@ -238,10 +241,10 @@
             this.labWeatherPrompt.BackColor = System.Drawing.Color.Transparent;
             this.labWeatherPrompt.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labWeatherPrompt.ForeColor = System.Drawing.SystemColors.Window;
-            this.labWeatherPrompt.Location = new System.Drawing.Point(19, 237);
+            this.labWeatherPrompt.Location = new System.Drawing.Point(17, 190);
             this.labWeatherPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labWeatherPrompt.Name = "labWeatherPrompt";
-            this.labWeatherPrompt.Size = new System.Drawing.Size(647, 45);
+            this.labWeatherPrompt.Size = new System.Drawing.Size(566, 36);
             this.labWeatherPrompt.TabIndex = 0;
             this.labWeatherPrompt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -251,9 +254,9 @@
             this.labCloud.BackColor = System.Drawing.Color.Transparent;
             this.labCloud.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCloud.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labCloud.Location = new System.Drawing.Point(543, 366);
+            this.labCloud.Location = new System.Drawing.Point(475, 293);
             this.labCloud.Name = "labCloud";
-            this.labCloud.Size = new System.Drawing.Size(42, 23);
+            this.labCloud.Size = new System.Drawing.Size(34, 18);
             this.labCloud.TabIndex = 33;
             this.labCloud.Text = "N/A";
             // 
@@ -263,10 +266,10 @@
             this.labTemp.BackColor = System.Drawing.Color.Transparent;
             this.labTemp.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTemp.ForeColor = System.Drawing.SystemColors.Window;
-            this.labTemp.Location = new System.Drawing.Point(277, 118);
+            this.labTemp.Location = new System.Drawing.Point(242, 94);
             this.labTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labTemp.Name = "labTemp";
-            this.labTemp.Size = new System.Drawing.Size(72, 38);
+            this.labTemp.Size = new System.Drawing.Size(59, 32);
             this.labTemp.TabIndex = 34;
             this.labTemp.Text = "N/A";
             // 
@@ -276,10 +279,10 @@
             this.toggleCtoF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.toggleCtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toggleCtoF.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.toggleCtoF.Location = new System.Drawing.Point(464, 137);
-            this.toggleCtoF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.toggleCtoF.Location = new System.Drawing.Point(406, 110);
+            this.toggleCtoF.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.toggleCtoF.Name = "toggleCtoF";
-            this.toggleCtoF.Size = new System.Drawing.Size(75, 54);
+            this.toggleCtoF.Size = new System.Drawing.Size(66, 43);
             this.toggleCtoF.TabIndex = 36;
             this.toggleCtoF.Text = "Change Scale";
             this.toggleCtoF.UseVisualStyleBackColor = false;
@@ -292,9 +295,10 @@
             this.btnViewHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewHistory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewHistory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewHistory.Location = new System.Drawing.Point(557, 18);
+            this.btnViewHistory.Location = new System.Drawing.Point(487, 14);
+            this.btnViewHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewHistory.Name = "btnViewHistory";
-            this.btnViewHistory.Size = new System.Drawing.Size(75, 90);
+            this.btnViewHistory.Size = new System.Drawing.Size(66, 72);
             this.btnViewHistory.TabIndex = 37;
             this.btnViewHistory.Text = "View History";
             this.btnViewHistory.UseVisualStyleBackColor = false;
@@ -305,9 +309,10 @@
             this.FLP.AutoScroll = true;
             this.FLP.BackColor = System.Drawing.Color.Transparent;
             this.FLP.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.FLP.Location = new System.Drawing.Point(216, 435);
+            this.FLP.Location = new System.Drawing.Point(189, 348);
+            this.FLP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FLP.Name = "FLP";
-            this.FLP.Size = new System.Drawing.Size(283, 437);
+            this.FLP.Size = new System.Drawing.Size(248, 350);
             this.FLP.TabIndex = 38;
             this.FLP.WrapContents = false;
             // 
@@ -317,9 +322,9 @@
             this.labFeelsLike.BackColor = System.Drawing.Color.Transparent;
             this.labFeelsLike.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labFeelsLike.ForeColor = System.Drawing.SystemColors.Window;
-            this.labFeelsLike.Location = new System.Drawing.Point(281, 168);
+            this.labFeelsLike.Location = new System.Drawing.Point(246, 134);
             this.labFeelsLike.Name = "labFeelsLike";
-            this.labFeelsLike.Size = new System.Drawing.Size(42, 23);
+            this.labFeelsLike.Size = new System.Drawing.Size(34, 18);
             this.labFeelsLike.TabIndex = 40;
             this.labFeelsLike.Text = "N/A";
             // 
@@ -330,9 +335,10 @@
             this.btnWeeklyForecast.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnWeeklyForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWeeklyForecast.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnWeeklyForecast.Location = new System.Drawing.Point(529, 478);
+            this.btnWeeklyForecast.Location = new System.Drawing.Point(463, 382);
+            this.btnWeeklyForecast.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWeeklyForecast.Name = "btnWeeklyForecast";
-            this.btnWeeklyForecast.Size = new System.Drawing.Size(137, 56);
+            this.btnWeeklyForecast.Size = new System.Drawing.Size(120, 45);
             this.btnWeeklyForecast.TabIndex = 41;
             this.btnWeeklyForecast.Text = "Weekly Forecast";
             this.btnWeeklyForecast.UseVisualStyleBackColor = false;
@@ -340,11 +346,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(679, 920);
+            this.ClientSize = new System.Drawing.Size(594, 736);
             this.Controls.Add(this.btnWeeklyForecast);
             this.Controls.Add(this.labFeelsLike);
             this.Controls.Add(this.FLP);
@@ -369,8 +375,10 @@
             this.Controls.Add(this.TBCity);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "WeatherApp";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
