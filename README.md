@@ -137,10 +137,12 @@ This application uses the [OpenWeatherMap](https://openweathermap.org/) API:
 
 ## 💡 Future Improvements
 
+
 - Secure storage for API Key.
+- Change the forecast time to local time
 - Loading animations during API calls.
 - Support for additional weather metrics (UV index, air quality, etc)
-+ Error Handling
+
 
 ---
 
