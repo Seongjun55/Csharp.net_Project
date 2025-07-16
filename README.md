@@ -146,8 +146,12 @@ This application uses the [OpenWeatherMap](https://openweathermap.org/) API:
 
 ---
 
-## ℹ️ License
+## ℹ️ License & Appendix
 
 This project was created for personal learning and non-commercial use.  
 Please comply with the OpenWeatherMap terms and license.
+
+Icon list (https://openweathermap.org/weather-conditions)
+<img width="623" height="690" alt="image" src="https://github.com/user-attachments/assets/41b8615e-db11-44f2-be77-dffb9e10e14d" />
+
 
