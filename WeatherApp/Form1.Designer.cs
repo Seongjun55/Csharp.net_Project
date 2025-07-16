@@ -247,6 +247,7 @@
             this.labWeatherPrompt.Size = new System.Drawing.Size(566, 36);
             this.labWeatherPrompt.TabIndex = 0;
             this.labWeatherPrompt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labWeatherPrompt.Click += new System.EventHandler(this.labWeatherPrompt_Click);
             // 
             // labCloud
             // 

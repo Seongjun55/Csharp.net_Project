@@ -120,23 +120,28 @@ namespace WeatherApp
             {
                 try
                 {
-                    // 도시명 기반 forecast API 사용
+                    string tempUnit = isCelsius ? "metric" : "imperial";
+
                     string url = string.Format(
                         "https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&units={2}",
                         TBCity.Text,
                         APIKey,
-                        isCelsius ? "metric" : "imperial");
+                        tempUnit);
 
                     var json = web.DownloadString(url);
                     Forecast5Day forecastData = JsonConvert.DeserializeObject<Forecast5Day>(json);
 
                     FLP.Controls.Clear();
 
-                    // 3시간 단위 데이터에서 10개만 표시
-                    for (int i = 0; i < Math.Min(10, forecastData.list.Count); i++)
-                    {
-                        var forecast = forecastData.list[i];
+                    // ▶ 여기부터 수정된 부분 ◀
+                    var forecasts = forecastData.list
+                        .Where(item =>
+                            DateTime.Parse(item.dt_txt).ToLocalTime() > DateTime.Now)
+                        .Take(10)
+                        .ToList();
 
+                    foreach (var forecast in forecasts)
+                    {
                         ForecastUC FUC = new ForecastUC();
 
                         FUC.picWeatherIcon.ImageLocation =
@@ -144,10 +149,21 @@ namespace WeatherApp
                             forecast.weather[0].icon + ".png";
 
                         FUC.labDT.Text =
-                            DateTime.Parse(forecast.dt_txt).ToString("HH:mm");
+                            DateTime.SpecifyKind(
+                                DateTime.Parse(forecast.dt_txt),
+                                DateTimeKind.Utc
+                                                 ).ToLocalTime().ToString("HH:mm");
+
+
+                        double windSpeed = forecast.wind.speed;
+
+                        if (!isCelsius)
+                        {
+                            windSpeed = windSpeed * 2.23694; // m/s → mi/h
+                        }
 
                         FUC.labWindSpeed.Text =
-                            forecast.wind.speed.ToString("0.##") +
+                            windSpeed.ToString("0.##") +
                             (isCelsius ? " m/s" : " mi/h");
 
                         FUC.labWeatherDescription.Text =
@@ -170,6 +186,7 @@ namespace WeatherApp
                 }
             }
         }
+
         void weatherPrompts(string labCondition)
         {
             //Switch case, when read weather condition, display accordingly
@@ -265,6 +282,11 @@ namespace WeatherApp
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labWeatherPrompt_Click(object sender, EventArgs e)
         {
 
         }
