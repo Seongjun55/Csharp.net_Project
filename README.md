@@ -38,18 +38,6 @@ This application uses the [OpenWeatherMap](https://openweathermap.org/) API:
 > The One Call API requires a paid plan. This application has been updated to use free APIs instead.
 
 ---
-
-## ⚙️ Installation & Usage
-
-1. Open the solution in Visual Studio and build the project.
-2. Obtain your API Key from OpenWeatherMap and replace the placeholder in `Form1.cs`:
-
-    ```csharp
-    string APIKey = "YOUR_API_KEY";
-    ```
-
-3. Run the application and enter a city name to search for weather data.
-
 ---
 
 ## 📁 Project Structure
@@ -122,7 +110,7 @@ This application uses the [OpenWeatherMap](https://openweathermap.org/) API:
 <img width="588" height="759" alt="메인화면" src="https://github.com/user-attachments/assets/7e45321d-95ed-4499-8acc-d40ff1a9fe6c" />
 
 2. Forecast screen
-<img width="588" height="759" alt="메인화면" src="https://github.com/user-attachments/assets/033af3c2-fcd9-4a77-ac9e-428a777fdbe0" />
+<img width="1096" height="761" alt="image" src="https://github.com/user-attachments/assets/df2a602b-95dd-41fd-bd2d-12ed0073cf46" />
 
 3. Search History
 <img width="847" height="763" alt="Search history" src="https://github.com/user-attachments/assets/f6985abd-0393-4146-9828-8ba1cbc6a8a8" />
